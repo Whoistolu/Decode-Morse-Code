@@ -40,8 +40,8 @@ def decode(str)
   result = ''
   str.strip.tr('/', ' ').split('  ').each do |n|
     arr = []
-    n.split.each do |n|
-      arr.push(MORSE_CODE[n])
+    n.split.each do |t|
+      arr.push(MORSE_CODE[t])
     end
     result += "#{arr.join} "
   end

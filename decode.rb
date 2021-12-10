@@ -29,7 +29,7 @@ MORSE_CODE = {
 
 def decode_word(code)
   result = ''
-  code = code.split(' ')
+  code = code.split
   code.each do |key|
     result += MORSE_CODE[key]
   end

@@ -31,7 +31,6 @@ def decode_word (code)
     
     result = ""
     code = code.split(" ")
-    print code
     code.each { |key|
        result += MORSE_CODE[key]
     }
@@ -47,9 +46,10 @@ def decode (str)
       end
       result += "#{arr.join} "
    end
-      return result
+      return result.upcase
 end
 
-   
-   print"#{decode("      .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-. / .-. ..- -... .. . ..."
-)}"
+puts decode_word('.-')
+puts decode_word('-- -.--')
+puts decode('-- -.--   -. .- -- .')
+puts decode("      .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-. / .-. ..- -... .. . ...")
